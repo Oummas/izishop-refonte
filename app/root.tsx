@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
 import { Layout } from "./layout/Layout";
 
 export const meta: MetaFunction = () => ({
@@ -24,12 +25,12 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <Scripts />
       </head>
       <body>
         <Layout />
         <ScrollRestoration />
-        <Scripts />
-        <LiveReload port={3000}/>
+        <LiveReload />
       </body>
     </html>
   );
