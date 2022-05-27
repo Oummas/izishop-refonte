@@ -8,15 +8,17 @@ import {
 } from "@remix-run/react";
 
 import { Layout } from "./layout/Layout";
+import styles from "./tailwind.css";
+
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Izishop",
   viewport: "width=device-width,initial-scale=1",
 });
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: "/dist/output.css" },
+  { rel: "stylesheet", href: styles },
 ];
 
 export default function App() {
@@ -25,11 +27,11 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        <Scripts />
       </head>
       <body>
         <Layout />
         <ScrollRestoration />
+        <Scripts />
         <LiveReload />
       </body>
     </html>
